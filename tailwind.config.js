@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         bannerImg: "url(../dist/img/home/videoPoster.jpg)",
+        camo: "url(../dist/img/home/fca-bg-grayscale.jpg)",
       },
       colors: {
         dark: "#2b2b2b",

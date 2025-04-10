@@ -82,6 +82,9 @@
     .banner {
         @apply flex items-center justify-center text-center;
     }
+    .bgImg {
+        @apply bg-bannerImg brightness-50 min-h-[650px] md:min-h-[720px] w-[100vw] bg-cover bg-center relative mt-4;
+    }
     .banner_wrapper {
         @apply text-white flex flex-col gap-4;
     }
@@ -89,10 +92,91 @@
         @apply text-[clamp(38.4px,4vw,80px)] font-serif font-bold;
     }
     .banner_wrapper p {
-        @apply font-raleway text-base;
+        @apply font-raleway text-base w-[28rem] mx-auto;
     }
     .banner_wrapper a {
         @apply mt-16;
+    }
+
+    /* FRONTLINE FAMILY */
+
+    .frontFam_wrapper {
+        @apply flex flex-col relative;
+    }
+    .frontFam_tabs {
+        @apply flex flex-wrap gap-4 pb-24;
+    }
+    .tabs {
+        @apply w-[200px] h-[134px] rounded-xl shadow-md border-2 bg-white hover:bg-white;
+    }
+    .tabs ul {
+        @apply flex flex-col gap-4 text-center justify-center h-full my-auto;
+    }
+    .tabs ul li a i{
+        @apply text-[40.3px] text-grayy;
+    }
+    .tabs ul li a h3 {
+        @apply text-[19.3px] text-berde font-semibold;
+    }
+    .tabs ul p {
+        @apply text-[12px] text-grayy;
+    }
+    .frontFam_vid {
+        @apply w-[435px] h-[637px] md:w-full md:mt-40 md:mb-20;
+    }
+    .TAB {
+        @apply flex w-fit  bg-white h-[200px] mx-auto rounded-xl border-2 shadow-md mb-24 absolute right-[15%] top-[-15%];
+    }
+    .TAB ul {
+        @apply flex flex-col gap-4 text-center justify-center my-auto px-16;
+    }
+    .TAB ul:nth-child(2) {
+        @apply border-x-2;
+    }
+    .TAB ul:nth-child(3) {
+        @apply border-r-2;
+    }
+    .TAB ul li a i{
+        @apply text-[40.3px] text-grayy;
+    }
+    .TAB ul li a h3 {
+        @apply text-[19.3px] text-berde font-semibold;
+    }
+    .TAB ul p {
+        @apply text-[12px] text-grayy;
+    }
+
+    /* CAMO */
+
+    .camo {
+        @apply bg-camo bg-cover;
+    }
+    .camo_content {
+        @apply flex flex-col md:grid md:grid-cols-2 md:items-center gap-12 md:gap-0 md:w-[1250px] md:mx-auto py-[80px];
+    }
+    .camo_content ul {
+        @apply flex flex-col gap-8 w-fit mx-auto;
+    }
+    .camo_content ul li a {
+        @apply flex gap-4 items-center;
+    }
+    .camo_content ul li a img {
+        @apply w-[25px];
+    }
+    .camo_content ul li a h3 {
+        @apply text-[21px] font-semibold;
+    }
+
+    /* COMPANY */
+
+    .company_content {
+        @apply flex flex-wrap gap-4;
+    }
+    .company_content a {
+        @apply w-full md:w-[400px] h-[150px] md:h-[200px] md:mx-auto flex;
+    }
+    .company_content a img {
+        @apply w-[200px] mx-auto my-auto;
     }
 }
 
