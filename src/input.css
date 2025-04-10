@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* * {
+        @apply outline outline-pink-600
+    } */
+}
+
+@layer components {
+    .container {
+        @apply max-w-[90rem] p-6 w-full mx-auto;
+    }
+
+    /* HEADER */
+
+    .headerContainer {
+        @apply max-w-[90rem] px-6 w-full mx-auto;
+    }
+    .branding {
+        @apply flex items-center justify-between md:mb-4 border-b-2 border-black md:border-0 pb-4;
+    }
+    .branding img {
+        @apply w-[200px];
+    }
+    .burger_menu {
+        @apply md:hidden;
+    }
+     .burger_menu span {
+        @apply w-[1.5rem] h-[.2rem] bg-black block rounded-full transition-all;
+    }
+     .burger_menu span:nth-child(2) {
+        @apply my-1;
+    }
+     .burger_menu.open span:first-child {
+        @apply transform translate-y-[10px] rotate-[225deg] transition-all;
+    }
+     .burger_menu.open span:nth-child(2) {
+        @apply opacity-0 transition-all;
+    }
+     .burger_menu.open span:last-child {
+        @apply transform translate-y-[-4px] rotate-[-225deg] transition-all;
+    }
+    .header_links {
+        @apply hidden md:block
+    }
+    .header_links ul {
+        @apply flex gap-4 items-center;
+    }
+    .header_navD {
+        @apply hidden md:block
+    }
+    .header_navD ul {
+        @apply flex justify-between border-t-2 border-black pt-4 items-center;
+    }
+    .header_navD ul li {
+        @apply border-r-2 border-grayy;
+    }
+    .header_navD ul li:last-child {
+        @apply border-0;
+    }
+    .header_navD ul li a {
+        @apply text-base text-grayy px-12 py-6;
+    }
+    .header_navD ul li a.active {
+        @apply border-t-4 border-t-myellow;
+    }
+    .header_navM {
+        @apply bg-white absolute overflow-hidden h-[100vh] w-0 top-[119px] right-0 transition-all md:hidden;
+    }
+    .header_navM.open {
+        @apply  w-[485px] transition-all;
+    }
+    .header_navM ul {
+        @apply flex flex-col gap-4 py-4 text-center;
+    }
+
+    /* BANNER */
+
+    .banner {
+        @apply flex items-center justify-center text-center;
+    }
+    .banner_wrapper {
+        @apply text-white flex flex-col gap-4;
+    }
+    .banner_wrapper h1 {
+        @apply text-[clamp(38.4px,4vw,80px)] font-serif font-bold;
+    }
+    .banner_wrapper p {
+        @apply font-raleway text-base;
+    }
+    .banner_wrapper a {
+        @apply mt-16;
+    }
+}
+
+@layer utilities {
+    .btn {
+        @apply inline-block py-[8px] px-[24px] border border-black rounded-md;
+    }
+    .btn-bg--blue{
+        @apply  inline-block py-[8px] px-[24px] border-transparent rounded-md bg-bloo hover:bg-lbloo transition-all text-white;
+    }
+    .btn-bg--yellow{
+        @apply  inline-block py-[8px] px-[24px] border-transparent rounded-md bg-myellow text-white;
+    }
+    .btn-bg--green{
+        @apply  inline-block py-[8px] px-[24px] border-transparent rounded-md bg-berde text-white;
+    }
+}
