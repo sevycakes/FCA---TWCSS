@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage: {
         bannerImg: "url(../dist/img/home/videoPoster.jpg)",
         camo: "url(../dist/img/home/fca-bg-grayscale.jpg)",
+        scholar: "url(../dist/img/home/scholarship.webp)",
       },
       colors: {
         dark: "#2b2b2b",
@@ -16,6 +17,7 @@ module.exports = {
         berde: '#28941d',
         lberde: '#9bb540',
         grayy: '#6b7381',
+        lgrayy: '#f2f2f2',
       },
       fontFamily: {
         'raleway': ['Raleway', 'sans-serif']
