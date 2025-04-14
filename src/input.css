@@ -68,10 +68,10 @@
         @apply border-t-4 border-t-myellow;
     }
     .header_navM {
-        @apply bg-white absolute overflow-hidden h-[100vh] w-0 top-[111px] right-0 transition-all md:hidden z-50;
+        @apply bg-white absolute overflow-hidden h-[100vh] w-0 top-[95px] right-0 transition-all md:hidden z-50;
     }
     .header_navM.open {
-        @apply  w-[485px] transition-all;
+        @apply  w-full transition-all;
     }
     .header_navM ul {
         @apply flex flex-col gap-4 py-4 text-center;
@@ -80,23 +80,30 @@
     /* BANNER */
 
     .banner {
-        @apply flex items-center justify-center text-center;
+        @apply flex items-center justify-center text-center w-full overflow-hidden;
     }
     .bgImg {
-        @apply bg-bannerImg brightness-50 min-h-[650px] md:min-h-[720px] w-[485px] md:w-[100vw] bg-cover bg-center relative mt-4;
+        @apply bg-bannerImg brightness-50 min-h-[650px] md:min-h-[720px] md:mt-4 w-full bg-cover bg-center relative;
     }
     .banner_wrapper {
-        @apply text-white flex flex-col gap-4;
+        @apply text-white flex flex-col gap-4 w-full;
     }
     .banner_wrapper h1 {
-        @apply text-[clamp(38.4px,4vw,80px)] font-serif font-bold;
+        @apply text-[clamp(32px,6vw,64px)] font-serif font-bold text-center;
     }
     .banner_wrapper p {
-        @apply font-raleway text-base w-[28rem] mx-auto;
+        @apply text-base text-center max-w-[90%] md:max-w-[900px] px-4 mx-auto md:mx-0 mt-4;
     }
-    .banner_wrapper a {
-        @apply mt-16;
+    .banner_btn {
+        @apply mt-8;
     }
+    .banner_btn a {
+        @apply block w-fit mx-auto
+    }
+    .contentTxt {
+        @apply absolute z-10 top-[25%] left-1/2 md:left-[28rem] transform -translate-x-1/2 md:translate-x-0 px-4 w-full md:w-[1500px] text-center md:text-left max-w-[90%] md:max-w-fit;
+    }
+    
 
     /* FRONTLINE FAMILY */
 
@@ -104,31 +111,25 @@
         @apply flex flex-col relative;
     }
     .frontFam_tabs {
-        @apply flex flex-wrap gap-4 pb-24;
+        @apply flex flex-wrap gap-4 justify-center pb-24;
     }
     .tabs {
-        @apply w-[200px] h-[134px] rounded-xl shadow-md border-2 bg-white;
+        @apply w-[200px] h-[150px] rounded-xl shadow-md border-2 bg-white hover:scale-110 hover:bg-berde transition-all;
     }
-    .tabs:hover {
-        @apply bg-berde text-white scale-105;
-      }
-      .tabs.group:hover {
-        @apply bg-berde text-white scale-105;
-      }
-    .tabs ul {
-        @apply flex flex-col gap-4 text-center justify-center h-full my-auto;
+    .tabs_content {
+        @apply flex flex-col gap-2 text-center justify-center h-full my-auto;
     }
-    .tabs ul li a i{
-        @apply text-[40.3px] text-grayy;
+    .tabs_laman a i{
+        @apply text-[40.3px] pt-4 text-grayy group-hover:text-white;
     }
-    .tabs ul li a h3 {
-        @apply text-[19.3px] text-berde font-semibold;
+    .tabs_laman a h3 {
+        @apply text-[19.3px] text-berde font-semibold group-hover:text-white;
     }
-    .tabs ul p {
-        @apply text-[12px] text-grayy;
+    .tabs_laman p {
+        @apply text-[12px] text-grayy pb-2 group-hover:text-white;
     }
     .frontFam_vid {
-        @apply w-[435px] h-[637px] md:w-full md:mt-40 md:mb-20;
+        @apply h-[637px] w-full md:mt-40 md:mb-20;
     }
     .TAB {
         @apply flex w-fit  bg-white h-[200px] mx-auto rounded-xl border-2 shadow-md mb-24 absolute right-[15%] top-[-15%];
@@ -161,7 +162,7 @@
         @apply flex flex-col md:grid md:grid-cols-2 md:items-center gap-12 md:gap-0 md:w-[1250px] md:mx-auto py-[80px];
     }
     .camo_content ul {
-        @apply flex flex-col gap-8 w-fit mx-auto;
+        @apply flex flex-col gap-8 w-fit mx-auto max-w-[90%];
     }
     .camo_content ul li a {
         @apply flex gap-4 items-center;
@@ -175,6 +176,9 @@
 
     /* CLIENTS */
 
+    .client h2 {
+        @apply text-[30px] text-berde font-semibold text-center pt-24
+    }
     .slider {
         @apply h-[340px] md:h-[600px];
     }
@@ -185,13 +189,19 @@
         @apply opacity-100 transition-all;
     }
     .slider_text {
-        @apply flex flex-col gap-4;
+        @apply flex flex-col gap-4 min-w-fit max-w-[90%];
     }
     .slider_text img {
         @apply w-[35px];
     }
+    .quote2 {
+        @apply flex items-end
+    }
+    .quote2 img {
+        @apply w-[35px];
+    }
     .slider_text p {
-        @apply w-[455px] md:w-[876px];
+        @apply min-w-fit md:w-[876px];
     }
     .slider_info {
         @apply flex justify-between;
@@ -218,16 +228,16 @@
         @apply flex flex-col gap-4;
     }
     .slider_nav {
-        @apply h-[150px] flex items-center justify-center;
+        @apply flex items-center justify-center mt-32 md:mt-16;
     }
     .slider_nav ul {
         @apply flex gap-2;
     }
     .slider_nav ul li a span {
-        @apply px-[12px] py-[1px] bg-grayy rounded-full;
+        @apply px-[11px] py-[1px] bg-grayy rounded-full;
     }
     .slider_nav ul li.active a span {
-        @apply px-[12px] py-[1px] bg-myellow rounded-full;
+        @apply px-[11px] py-[1px] bg-myellow rounded-full;
     }
 
     /* SCHOLAR */
@@ -242,7 +252,7 @@
         @apply text-[30px] text-berde font-semibold;
     }
     .scholar_wrapper p {
-        @apply w-[425px];
+        @apply w-fit max-w-[450px];
     }
     .scholar_btn {
         @apply flex gap-4 w-[100px];
@@ -331,7 +341,7 @@
         @apply text-[clamp(38.4px,4vw,80px)] font-raleway font-thin text-center mb-24
     }
     .faqContent ul {
-        @apply text-center md:text-left w-[376.5px] mb-24
+        @apply text-center md:text-left min-w-fit md:w-[350px] mb-24
     }
     .faqContent ul li {
         @apply my-3;
@@ -379,7 +389,10 @@
 
 @layer utilities {
     .btn {
-        @apply inline-block py-[8px] px-[24px] border border-black rounded-md;
+        @apply inline-block py-[8px] px-[24px] border border-black rounded-md hover:bg-berde hover:text-white;
+    }
+    .btn2 {
+        @apply inline-block py-[8px] px-[24px] border border-berde rounded-md hover:bg-myellow hover:text-white;
     }
     .btn-bg--blue{
         @apply  inline-block py-[8px] px-[24px] border-transparent rounded-md bg-bloo hover:bg-lbloo transition-all text-white;
@@ -387,7 +400,10 @@
     .btn-bg--yellow{
         @apply  inline-block py-[8px] px-[24px] border-transparent rounded-md bg-myellow text-white;
     }
+    .btn-bg--yellow2{
+        @apply  inline-block py-[8px] px-[24px] border border-black rounded-md bg-myellow hover:bg-berde text-white;
+    }
     .btn-bg--green{
-        @apply  inline-block py-[8px] px-[24px] border-transparent rounded-md bg-berde text-white;
+        @apply  inline-block py-[8px] px-[24px] border-transparent rounded-md bg-berde hover:bg-myellow text-white;
     }
 }

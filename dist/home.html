@@ -6,8 +6,9 @@
     <title>FCA - Home</title>
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="font-raleway">
 
     <!-- HEADER -->
 
@@ -60,7 +61,7 @@
                             <li><i class="fa-solid fa-phone"></i> (049) 521-0732</li>
                             <li><i class="fa-solid fa-mobile-retro"></i> (+63) 908-202-0749 | (+63) 926-363-9722</li>
                             <li><a href="" class="btn-bg--blue">Facebook</a></li>
-                            <li><a href="faq.html" class="btn">FAQ's</a></li>
+                            <li><a href="faq.html" class="btn-bg--yellow2">FAQ's</a></li>
                         </div>
                     </ul>
                 </div>
@@ -72,17 +73,18 @@
     <!-- BANNER -->
 
     <div class="banner">
-        <div class="banner_wrapper">
+        <div class="banner_wrapper relative w-full">
             <div class="bgImg"></div>
-            <div class="absolute top-[25%] md:top-[35%] md:left-[20%]">
+            <div class="contentTxt" data-aos="fade-up"
+            data-aos-anchor-placement="center-center">
                 <h1>
                     Building Faith, Character and
                     <br>
                     Academic Excellence
                 </h1>
                 <p>We genuinely care about the holistic development of our students, and continue to reach for our vision of impacting the nation through the development of Godly steward leaders.</p>
-                <div>
-                <a href="" class="btn-bg--green">Inquire now!</a>
+                <div class="banner_btn">
+                    <a href="#" class="btn-bg--green">Inquire now!</a>
                 </div>
             </div>
         </div>
@@ -119,31 +121,31 @@
 
                 <div class="frontFam_tabs md:hidden">
                     <div class="tabs group">
-                        <ul>
-                            <li><a href=""><i class="fa-solid fa-cubes"></i></a></li>
-                            <li><a href=""><h3>Playschool</h3></a></li>
-                        </ul>  
+                        <div class="tabs_content">
+                            <div class="tabs_laman"><a href=""><i class="fa-solid fa-cubes"></i></a></div>
+                            <div class="tabs_laman"><a href=""><h3>Playschool</h3></a></div>
+                        </div>  
                     </div>
                     <div class="tabs group">
-                        <ul>
-                            <li><a href=""><i class="fa-solid fa-child-reaching"></i></a></li>
-                            <li><a href=""><h3>Pre-Elementary</h3></a></li>
-                            <p>Nursery | Pre-Kinder | Kinder</p>
-                        </ul>  
+                        <div class="tabs_content">
+                            <div class="tabs_laman"><a href=""><i class="fa-solid fa-child-reaching"></i></a></div>
+                            <div class="tabs_laman"><a href=""><h3>Pre-Elementary</h3></a></div>
+                            <div class="tabs_laman"><p>Nursery | Pre-Kinder | Kinder</p></div>
+                        </div>   
                     </div>
                     <div class="tabs group">
-                        <ul>
-                            <li><a href=""><i class="fa-solid fa-book-open"></i></a></li>
-                            <li><a href=""><h3>Elementary</h3></a></li>
-                            <p>Primary | Intermediate</p>
-                        </ul>  
+                        <div class="tabs_content">
+                            <div class="tabs_laman"><a href=""><i class="fa-solid fa-book-open"></i></a></div>
+                            <div class="tabs_laman"><a href=""><h3>Elementary</h3></a></div>
+                            <div class="tabs_laman"><p>Primary | Intermediate</p></div>
+                        </div>   
                     </div>
                     <div class="tabs group">
-                        <ul>
-                            <li><a href=""><i class="fa-solid fa-user-tie"></i></a></li>
-                            <li><a href=""><h3>Junior High</h3></a></li>
-                            <p>Grade 7-10</p>
-                        </ul>  
+                        <div class="tabs_content">
+                            <div class="tabs_laman"><a href=""><i class="fa-solid fa-user-tie"></i></a></div>
+                            <div class="tabs_laman"><a href=""><h3>Junior High</h3></a></div>
+                            <div class="tabs_laman"><p>Grade 7-10</p></div>
+                        </div>   
                     </div>
                 </div>
 
@@ -174,6 +176,7 @@
 
     <div class="client">
         <div class="container">
+            <h2>What Our Clients Have To Say</h2>
             <div class="client_wrapper">
                 <div class="slider relative">
                     <div class="slider_tab">
@@ -191,7 +194,9 @@
                                             <small>Mother of Aebriel</small>
                                         </div>
                                     </div>
-                                    <img src="./img/home/qoute2.svg" alt="">
+                                    <div class="quote2">
+                                        <img src="./img/home/qoute2.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="slider_img">
@@ -218,7 +223,9 @@
                                             <small>Mother of Cassey</small>
                                         </div>
                                     </div>
-                                    <img src="./img/home/qoute2.svg" alt="">
+                                    <div class="quote2">
+                                        <img src="./img/home/qoute2.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="slider_img">
@@ -247,7 +254,9 @@
                                                 Mother of Popoy</small>
                                         </div>
                                     </div>
-                                    <img src="./img/home/qoute2.svg" alt="">
+                                    <div class="quote2">
+                                        <img src="./img/home/qoute2.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="slider_img">
@@ -359,7 +368,7 @@
                     </div>
                     <div class="link_btn">
                         <a href="" class="btn-bg--green">Give</a>
-                        <a href="" class="btn">FAQ's</a>
+                        <a href="" class="btn2">FAQ's</a>
                     </div>
                 </div>
             </div>
@@ -379,7 +388,9 @@
             </div>
         </div>
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>
+        AOS.init();
+      </script>
     <script src="./js/script.js"></script>
 </body>
 </html>

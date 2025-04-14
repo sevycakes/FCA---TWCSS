@@ -34,6 +34,35 @@ function removeActiveContent() {
     });
 }
 
+
+// FAQ SLIDER
+
+const faqNav = document.querySelectorAll(".faq_nav_link");
+const faqContent = document.querySelectorAll(".content");
+
+faqNav.forEach((faq) => {
+    faq.addEventListener("click", () => {
+        removeActiveFaq();
+        faq.classList.add("active");
+
+        const activeContent = document.querySelector(`#${faq.id}-content`);
+        removeActiveContentFaq();
+        activeContent.classList.add("active");
+    });
+});
+
+function removeActiveFaq() {
+    faqNav.forEach((faq) => {
+        faq.classList.remove("active");
+    });
+}
+
+function removeActiveContentFaq() {
+    faqContent.forEach((content) => {
+        content.classList.remove("active");
+    });
+}
+
 // FAQ
 
 const links = document.querySelectorAll(".contentText a");
@@ -47,31 +76,3 @@ links.forEach((link) => {
         paragraph.classList.toggle("open");
     });
 });
-
-// FAQ SLIDER
-
-const faqNav = document.querySelectorAll(".faq_nav_link");
-const faqContent = document.querySelectorAll(".content");
-
-faqNav.forEach((faq) => {
-    faq.addEventListener("click", () => {
-        removeActiveFaq();
-        faq.classList.add("active");
-
-        const activeContent = document.querySelector(`#${faq.id}-content`);
-        removeActiveContent();
-        activeContent.classList.add("active");
-    });
-});
-
-function removeActiveFaq() {
-    faqNav.forEach((faq) => {
-        faq.classList.remove("active");
-    });
-}
-
-function removeActiveContent() {
-    faqContent.forEach((content) => {
-        content.classList.remove("active");
-    });
-}
